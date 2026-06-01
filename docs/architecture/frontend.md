@@ -230,6 +230,10 @@ Definidos em `src/index.css`, com variantes light/dark:
 | `--surface-card` | `#FFFFFF` | `#252820` | Background de cards |
 | `--surface-border` | `#E2E4D8` | `#3D4136` | Bordas |
 
+### UI Patterns
+- **Sidebar Contrast**: Implementação dinâmica baseada em luminância (YIQ). Calcula se o `sidebarColor` é claro ou escuro e alterna entre `text-white` e `text-slate-900`.
+- **Date Picker Flash Fix**: Aplicação de `style={{ colorScheme: resolvedTheme }}` inline nos inputs de data para garantir o esquema correto no primeiro frame de pintura do Chromium. Regra global `html:not(.dark) input[type='date'] { color-scheme: light !important; }` em `index.css` como fallback de segurança.
+
 ### Cores Funcionais
 | Nome | Uso | Token |
 |------|-----|-------|
